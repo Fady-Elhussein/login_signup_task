@@ -7,10 +7,10 @@ class RegistrationServices{
 
   static Future<RegistrationModel> loginData({required String email,required String password}) async{
 try{
-  Response response = await dio.post("https://student.valuxapps.com/api/login",
+  Response response = await dio.post("https://elsewedyteam.runasp.net/api/Login/CheckUser",
   data: {
-    "email":email,
-    "password":password,
+    "Email":email,
+    "Password":password,
   });
   if(response.statusCode==200){
     print(response.data);
@@ -32,12 +32,12 @@ try{
 
   static Future<RegistrationModel> signUpData({required String email,required String password,required String phone,required String name}) async{
     try{
-      Response response = await dio.post("https://student.valuxapps.com/api/register",
+      Response response = await dio.post("https://elsewedyteam.runasp.net/api/Register/AddUser",
           data: {
-            "email":email,
-            "password":password,
-            "phone":phone,
-            "name":name,
+            "Email":email,
+            "Password":password,
+            "Phone":phone,
+            "Name":name,
 
           });
       if(response.statusCode==200){
