@@ -77,6 +77,8 @@ class SignUpScreen extends StatelessWidget {
                       true) {
                     print(registrationProviderObject
                         .registrationModel?.message);
+                     ScaffoldMessenger.of(context).showSnackBar(registrationProviderObject
+                            .registrationModel?.message);
                     Navigator.push(
                         context,
                         MaterialPageRoute(
